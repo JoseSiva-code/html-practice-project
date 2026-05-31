@@ -1,70 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Digital Solutions</title>
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* TODO: Add your CSS here! */
+        /* Instructions:
+           1. Style the header with a gradient background and flexbox navigation
+           2. Create the hero section with a gradient, centered content, and CTA button
+           3. Style the features cards with flexbox, shadows, and hover effects
+           4. Design the contact form section with inputs and button
+           5. Add responsive design for mobile devices
+        */
+        header {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.hero {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero button,
+form button {
+  background-color: white;
+  color: #0072ff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.features {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  background-color: #f4f7fb;
+  padding: 80px 20px;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+form button {
+  background-color: #0072ff;
+  color: white;
+}
+
+footer {
+  background-color: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
+} v
+    </style>
 </head>
 <body>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="header-container">
+            <div class="logo">TechFlow</div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <h1>My First Webpage</h1>
-  <h2>About This Page</h2>
-  <h3>HTML Practice</h3>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Build Amazing Digital Products</h1>
+        <p>Transform your ideas into reality with our modern solutions</p>
+        <button>Get Started</button>
+    </section>
 
-  <p>
-    This is my first HTML page. I am learning how to use the most important HTML tags.
-  </p>
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features">
+        <h2>Why Choose Us</h2>
+        <div class="cards-container">
+            <!-- CARD 1 -->
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Fast & Reliable</h3>
+                <p>Lightning-quick performance that your users will love. Built for speed and stability.</p>
+            </div>
 
-  <p>
-    I am learning <strong>HTML</strong>, practising <em>basic structure</em>, 
-    and using a <span>span element</span>.
-  </p>
+            <!-- CARD 2 -->
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Beautiful Design</h3>
+                <p>Modern, colorful interfaces that engage users and drive conversions.</p>
+            </div>
 
-  <br>
+            <!-- CARD 3 -->
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Secure & Safe</h3>
+                <p>Enterprise-grade security to protect your data and your customers.</p>
+            </div>
+        </div>
+    </section>
 
-  <hr>
+    <!-- CONTACT FORM SECTION -->
+    <section class="form-section" id="contact">
+        <div class="form-container">
+            <h2>Get In Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-  <h2>My Hobbies</h2>
-
-  <ul>
-    <li>Coding</li>
-    <li>Reading</li>
-    <li>Training</li>
-  </ul>
-
-  <h2>My Learning Goals</h2>
-
-  <ol>
-    <li>Learn HTML</li>
-    <li>Learn CSS</li>
-    <li>Learn JavaScript</li>
-  </ol>
-
-  <h2>HTML Terms</h2>
-
-  <dl>
-    <dt>HTML</dt>
-    <dd>HTML is the language used to create the structure of a webpage.</dd>
-
-    <dt>Tag</dt>
-    <dd>A tag is used to create elements on a webpage.</dd>
-
-    <dt>Element</dt>
-    <dd>An element is made with an opening tag, content, and a closing tag.</dd>
-  </dl>
-
-  <h2>Useful Link</h2>
-
-  <a href="https://developer.mozilla.org/" target="_blank">
-    Visit MDN Web Docs
-  </a>
-
-  <h2>Image Example</h2>
-
-  <img 
-    src="https://via.placeholder.com/300" 
-    alt="Example placeholder image"
-  >
-
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 TechFlow. All rights reserved.</p>
+    </footer>
 </body>
-</html>
+</html> 
